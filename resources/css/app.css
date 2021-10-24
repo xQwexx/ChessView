@@ -1,0 +1,71 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: stretch;
+}
+div.chess-cell {
+    width: 12.5%;
+    height: 100%;
+    background-color: #328ba4;
+    min-height: 10px;
+    aspect-ratio: 1 !important;
+    float: left;
+}
+div.chess-row {
+    height: 12.5%;
+    display: table-row;
+}
+
+.chess-row:nth-of-type(even) .chess-cell:nth-of-type(even),
+.chess-row:nth-of-type(odd) .chess-cell:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+#chess-board {
+    background-color: #328ba4;
+    aspect-ratio: 1;
+}
+#full-chess-board {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+#chess-board-space {
+    width: 60%;
+}
+@media screen and (max-width: 760px) {
+    #chess-board-space {
+        width: 100%;
+    }
+    .chess-label-bottom {
+        font-size: small;
+    }
+    .chess-label-left {
+        font-size: small;
+    }
+    #newfen-button {
+        width: 100%;
+    }
+}
+#chess-board-space:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.chess-label-bottom {
+    color: #328ba4;
+    font-weight: bold;
+    font-size: large;
+    width: 12.5%;
+    text-align: center;
+}
+.chess-label-left {
+    color: #328ba4;
+    font-weight: bold;
+    font-size: large;
+    height: 12.5%;
+    padding-right: 5px;
+}
