@@ -20,10 +20,10 @@
         <script src="js/chess-board.js"></script>
     </head>
     <body>
-        <div class="row p-5 w-100">
-            <div id="chess-board-space" value={{$fen}} class="col-md-6">
+        <div class="row p-5">
+            <div id="chess-board-space" value={{$fen}} class="col-md-6 p-0">
             </div>
-            <div class="col-md-6 order-first order-md-last text-center">
+            <div class="col-md-6 order-first order-md-last text-center p-0">
                 <button id="newfen-button" class="btn btn-primary">
                     Ny FEN
                 </button>

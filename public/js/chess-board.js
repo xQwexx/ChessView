@@ -50,7 +50,7 @@ class ChessRow{
   render(){
     var rowData = this.cells.map(val => val.render()).join('');
 
-    return `<div class="chess-row d-inline-flex w-100">
+    return `<div class="chess-row d-inline-flex">
       ${rowData}
     </div>
     `;
@@ -78,7 +78,7 @@ class ChessBoard{
 
       return `
       <div id="full-chess-board">
-        <div class="d-inline-flex w-100">
+        <div class="d-inline-flex">
           <div class="flex-column-reverse">
           ${this.genDivs(8, '1', "chess-label-left")}
           </div>
@@ -86,7 +86,7 @@ class ChessBoard{
             ${tableData}
           </div>
         </div>
-        <div class="flex-row w-100  d-flex ">
+        <div class="flex-row d-flex">
           <div class="p-2">
           </div>
           ${this.genDivs(8, 'A', "chess-label-bottom p-2")}
